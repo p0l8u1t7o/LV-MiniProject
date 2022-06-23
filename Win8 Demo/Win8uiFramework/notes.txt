@@ -1,0 +1,31 @@
+
+*MainView*
+
+- This is the main part of the window
+- Your content should scale to fit the window
+- The default MainView simple picks a random color at initialization and fills it's entire pane with that color.  This makes it easy to see when another MainView is visible
+
+*Charms*
+
+- Charms are the things that slide in from the right, use this area for settings and configuration
+- All charms are 646px wide, this is defined in "CharmVariables.vi"
+- Charms should handle scaling in the vertical direction
+
+*AppBar*
+
+- AppBars slide in from the bottom, use for Application commands
+- All AppBars are 100px tall, this is defined in "AppBarVariables.vi"
+- AppBars should handle scaling in the horizontal direction
+
+
+*MVC Terminology*
+
+I use the terms "Model" "View" and "Controller" to describe various actors. Here's what I mean by them:
+
+- "Model" represents a data source or sink that has no direct user interaction (UI).  Models may or may not be actors.
+
+- "View" is an actor that allows you to see something related to a Model. The primary purpose of a View is to provide a skinnable interface. My Views differ from typical MVC implementations because button clicks and other UI operations that change the model or launch additional views may be captured in the View's event structure but should be immmediately delegated to a controller or model. Views may use event structures to implement UI-centric features such as mouseovers.
+
+Views may also perform analysis or calculations if the resultant values are purely for local display purposes (i.e. never saved to disk or broadcast)
+
+- "Controller" is an actor that owns Views and Models. The Controller's tasks include starting and stopping other actors, loading them into and out of SubPanels. A Controller may also be a View (ViewController)

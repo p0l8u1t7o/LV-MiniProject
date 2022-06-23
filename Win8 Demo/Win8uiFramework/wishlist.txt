@@ -1,0 +1,15 @@
+Bug Fixes
+
+
+Feature Requests
+- Message dialogs
+- - http://msdn.microsoft.com/en-us/library/windows/apps/hh738363.aspx
+- Flyouts
+- - http://msdn.microsoft.com/en-us/library/windows/apps/hh465341.aspx
+- Suspend/resume
+- Splash screen
+
+
+Other
+- Package as framework
+- Provide templates for various classes (MainController, AppBar, Charm, etc.)
